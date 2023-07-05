@@ -29,6 +29,7 @@ tiup playground
 ```bash
 tiup client
 ```
+- Install tiflash: Refer to this link: https://github.com/pingcap/tiflash
 
 - Install go-tpc
 ```bash
