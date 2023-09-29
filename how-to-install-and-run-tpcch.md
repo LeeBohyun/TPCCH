@@ -13,19 +13,19 @@ sudo apt install golang-go
 ```
 
 ### Install TiUP & TiDB
-1. Install TiUP 
+- Install TiUP 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://tiup-mirrors.pingcap.com/install.sh | sh
 ```
-2. Add PATH to the bash script
+- Add PATH to the bash script
 ```bash
 source ${your_shell_profile}
 ```
-3. Start the cluster in the current session:
+- Start the cluster in the current session:
 ```bash
 tiup playground
 ```
-4. User the TiUP client to connect to TiDB
+- User the TiUP client to connect to TiDB
 ```bash
 tiup client
 ```
@@ -104,9 +104,9 @@ analyze table region;
 analyze table supplier;
 ```
 
-### Run the TPCCH Test
+### Run the TPC-CH Test
 ```bash
-tiup bench ch --host 172.16.5.140 -P4000 --warehouses 1000 run -D tpcc -T 50 -t 1 --time 1h
+tiup bench ch --host 172.16.5.140 -P4000 --warehouses 50 run -D tpcc -T 50 -t 1 --time 1h
 ```
 - Sample Output
 ```bash
