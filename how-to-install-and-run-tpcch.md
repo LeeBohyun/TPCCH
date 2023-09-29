@@ -1,18 +1,18 @@
-# TPC-CH Benchmark on MySQL
+# Run TPC-CH Benchmark on MySQL
 
 ## Description
 - CH-benCHmark is a mixed workload containing both TPC-C and TPC-H tests. It is the most common workload to test HTAP systems. 
 - Before running the CH-benCHmark test, you need to deploy TiFlash first, which is a TiDB's HTAP component. After you deploy TiFlash and create TiFlash replicas, TiKV will replicate the latest data of TPC-C online transactions to TiFlash in real time, and the TiDB optimizer will automatically push down OLAP queries from TPC-H workload to the MPP engine of TiFlash for efficient execution.
-- The CH-benCHmark test in this document is implemented based on go-tpc. You can download the test program using the following TiUP command:
+- The CH-benCHmark test in this document is implemented based on go-tpc. You can download the test program using the following TiUP command.
 
-## Prerequisites and Installations
+## Prerequisites Installation
 
-- Install Go-lang higher than 11.0
+### Install Go-lang higher than 11.0
 ```bash
 sudo apt install golang-go
 ```
 
-- Install TiUP & TiDB
+### Install TiUP & TiDB
 1. Install TiUP 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://tiup-mirrors.pingcap.com/install.sh | sh
@@ -29,9 +29,10 @@ tiup playground
 ```bash
 tiup client
 ```
-- Install tiflash: Refer to this link: https://github.com/pingcap/tiflash
+### Install tiflash: 
+- Refer to this link: https://github.com/pingcap/tiflash
 
-- Install go-tpc
+### Install go-tpc
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/pingcap/go-tpc/master/install.sh | sh
 git clone https://github.com/pingcap/go-tpc.git
